@@ -1,5 +1,5 @@
 //============================================================================
-// Name        : operator.cpp
+// Name        : Encapsulation.cpp
 // Author      : Vishal Tyagi
 // Version     :
 // Copyright   : Your copyright notice
@@ -8,17 +8,27 @@
 
 #include <iostream>
 using namespace std;
-class Operators
+class encapsulation
 {
+	string name;
+	int age;
 public:
-	void operator+(Operators obj)
+	void set_data(int age, string name)
 	{
-		cout<<"operator overloading";
+		this->age=age;
+		this->name=name;
+	}
+
+	void get_data()
+	{
+		cout<<"age is :"<<age<<endl;
+		cout<<"name is :"<<name<<endl;
 	}
 };
 
 int main() {
-  Operators obj1,obj2;
-  obj1+obj2;
+	encapsulation *obj=new encapsulation();
+	obj->set_data(22,"vishal");
+	obj->get_data();
 	return 0;
 }

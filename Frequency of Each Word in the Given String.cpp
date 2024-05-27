@@ -1,5 +1,5 @@
 //============================================================================
-// Name        : operator.cpp
+// Name        : Frequency.cpp
 // Author      : Vishal Tyagi
 // Version     :
 // Copyright   : Your copyright notice
@@ -7,18 +7,23 @@
 //============================================================================
 
 #include <iostream>
+#include<set>
+#include<string>
+#include<algorithm>
 using namespace std;
-class Operators
-{
-public:
-	void operator+(Operators obj)
-	{
-		cout<<"operator overloading";
-	}
-};
 
 int main() {
-  Operators obj1,obj2;
-  obj1+obj2;
+	string str="neerajsingh";
+	int sized=str.length();
+	int count1=0;
+	set<char> strg(str.begin(),str.end());
+
+
+	for(char ch:strg)
+	{
+		count1=count(str.begin(),str.end(),ch);
+		cout<<ch<<" is :"<<count1<<endl;
+	}
+
 	return 0;
 }

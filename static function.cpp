@@ -1,5 +1,5 @@
 //============================================================================
-// Name        : operator.cpp
+// Name        : static.cpp
 // Author      : Vishal Tyagi
 // Version     :
 // Copyright   : Your copyright notice
@@ -8,17 +8,18 @@
 
 #include <iostream>
 using namespace std;
-class Operators
-{
-public:
-	void operator+(Operators obj)
-	{
-		cout<<"operator overloading";
-	}
-};
+
+
 
 int main() {
-  Operators obj1,obj2;
-  obj1+obj2;
+	 int count=0;
+	for(int i=0;i<5;i++)
+	{
+		count=0;
+		cout<<count++<< " ";
+	}
+
+	cout<<endl<<count;
+
 	return 0;
 }

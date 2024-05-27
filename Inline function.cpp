@@ -1,5 +1,5 @@
 //============================================================================
-// Name        : operator.cpp
+// Name        : Inline.cpp
 // Author      : Vishal Tyagi
 // Version     :
 // Copyright   : Your copyright notice
@@ -8,17 +8,14 @@
 
 #include <iostream>
 using namespace std;
-class Operators
+
+inline void adde(int a, int b)
 {
-public:
-	void operator+(Operators obj)
-	{
-		cout<<"operator overloading";
-	}
-};
+	int c=a+b;
+	cout<<c<<" "<<endl;
+}
 
 int main() {
-  Operators obj1,obj2;
-  obj1+obj2;
+	adde(5,7);
 	return 0;
 }

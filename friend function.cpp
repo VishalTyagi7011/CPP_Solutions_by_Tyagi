@@ -1,5 +1,5 @@
 //============================================================================
-// Name        : operator.cpp
+// Name        : friend.cpp
 // Author      : Vishal Tyagi
 // Version     :
 // Copyright   : Your copyright notice
@@ -8,17 +8,33 @@
 
 #include <iostream>
 using namespace std;
-class Operators
+
+class parent
 {
+	string name;
+	 int age;
+	long long int phone;
 public:
-	void operator+(Operators obj)
+
+	parent(string name , int age, long long int number)
 	{
-		cout<<"operator overloading";
+     this->name=name;
+     this->age=age;
+     phone=number;
 	}
+
+	friend void print(parent &obj);
+
 };
 
+void print(parent &obj)
+{
+	cout<<obj.age<<endl<<obj.name<<endl<<obj.phone;
+}
+
 int main() {
-  Operators obj1,obj2;
-  obj1+obj2;
+	parent obj("vishla",23,7011315126);
+	print(obj);
+
 	return 0;
 }

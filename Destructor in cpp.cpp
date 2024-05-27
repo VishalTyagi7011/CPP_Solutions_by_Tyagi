@@ -1,5 +1,5 @@
 //============================================================================
-// Name        : operator.cpp
+// Name        : Destructor.cpp
 // Author      : Vishal Tyagi
 // Version     :
 // Copyright   : Your copyright notice
@@ -8,17 +8,37 @@
 
 #include <iostream>
 using namespace std;
-class Operators
+
+class Base
 {
 public:
-	void operator+(Operators obj)
+	string name;
+	int age;
+	int roll;
+
+	Base(int aged,int roll)
 	{
-		cout<<"operator overloading";
+      this->age=aged;
+      this->roll=roll;
+	}
+
+	~Base()
+	{
+		cout<<"Object is deleting"<<endl;
 	}
 };
 
 int main() {
-  Operators obj1,obj2;
-  obj1+obj2;
+
+	Base *obj= new Base(22,23);
+	delete (obj);
+
+	cout<<obj->age<<endl;
+	obj->name="vishal";
+	cout<<obj->name;
+
+	Base obj1(*obj);
+	Base obj2(obj1);
+
 	return 0;
 }

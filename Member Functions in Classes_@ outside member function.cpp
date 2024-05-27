@@ -1,5 +1,5 @@
 //============================================================================
-// Name        : operator.cpp
+// Name        : Member.cpp
 // Author      : Vishal Tyagi
 // Version     :
 // Copyright   : Your copyright notice
@@ -8,17 +8,33 @@
 
 #include <iostream>
 using namespace std;
-class Operators
+
+class outside_member
 {
-public:
-	void operator+(Operators obj)
+public :
+	string name;
+	int age;
+	void print();
+	outside_member(int age)
 	{
-		cout<<"operator overloading";
+		this->age=age;
+		cout<<"base class is calling"<<endl;
 	}
 };
+void printed()
+{
+	cout<<"Hello G"<<endl;
+}
+void outside_member::print()
+{
+	cout<<"this function is calling from outside the class"<<endl;
+	printed();
+}
+
+
 
 int main() {
-  Operators obj1,obj2;
-  obj1+obj2;
+	outside_member obj(22);
+	obj.print();
 	return 0;
 }

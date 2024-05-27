@@ -1,5 +1,5 @@
 //============================================================================
-// Name        : operator.cpp
+// Name        : ENum.cpp
 // Author      : Vishal Tyagi
 // Version     :
 // Copyright   : Your copyright notice
@@ -8,17 +8,15 @@
 
 #include <iostream>
 using namespace std;
-class Operators
+enum Tyagi
 {
-public:
-	void operator+(Operators obj)
-	{
-		cout<<"operator overloading";
-	}
+	name="viashla",
+	age=18,
+	company="idemia"
 };
 
 int main() {
-  Operators obj1,obj2;
-  obj1+obj2;
+	enum Tyagi obj;
+	obj.name;
 	return 0;
 }

@@ -1,5 +1,5 @@
 //============================================================================
-// Name        : operator.cpp
+// Name        : rotation.cpp
 // Author      : Vishal Tyagi
 // Version     :
 // Copyright   : Your copyright notice
@@ -8,17 +8,25 @@
 
 #include <iostream>
 using namespace std;
-class Operators
-{
-public:
-	void operator+(Operators obj)
-	{
-		cout<<"operator overloading";
-	}
-};
 
 int main() {
-  Operators obj1,obj2;
-  obj1+obj2;
+	int arr[]={1,2,3,4,5};
+    for(int i=0;i<5;i++)
+    {
+    	int temp=arr[0];
+    	for(int j=0;j<4;j++)
+    	{
+          arr[j]=arr[j+1];
+
+    	}
+    	arr[4]=temp;
+
+        for(int element:arr)
+        {
+        	cout<<element<<" ";
+        }
+        cout<<endl;
+    }
+
 	return 0;
 }
