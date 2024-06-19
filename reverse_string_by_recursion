@@ -1,0 +1,17 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+string rever(string strg, int leng)
+{
+    if(leng==0)
+    return "";
+    else
+    return strg[leng-1]+rever(strg,leng-1);
+}
+
+int main() {
+cout<<rever("madamm",6);
+
+    return 0;
+}
