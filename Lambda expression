@@ -1,0 +1,29 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+
+int main() {
+int a=5,b=6;
+
+// Approach 1 
+[](int &c,int &d)->void{ c=10;d=12;}(a,b);
+std::cout<<a<<std::endl;
+
+// Approach 2;-(Non-mutable Lambda, inside main value a,b, cannot be changed)
+
+int d=1,e=3;
+[=]()->void{
+    std::cout<<d<<" "<<e<<std::endl;
+}();
+
+// Approach 3: Mutable Lambda , values can be change inside main
+
+int i=6,j=9;
+[&]()->void{
+    i=15;
+    j=18;
+}();
+std::cout<<"i is :"<<i<<" ,j is:"<<j<<std::endl;
+
+
+    return 0;
+}
