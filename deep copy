@@ -1,0 +1,36 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+class student
+{
+    public:
+    std::string name;
+    int *age;
+  // parameterised constructor is calling  
+    student(std::string name, int age)
+    {
+        this->name=name;
+        this->age=new int();
+        *(this->age)=age;
+    }
+    
+    // copy constructor is calling
+    student(const student& obj)
+    {
+        this->name=obj.name;
+        age=new int;
+        *age=*obj.age;
+    }
+};
+
+int main() {
+    // Write C++ code here
+    student obj("vishal",22);
+    std::cout<<"obj, age is :"<<*obj.age<<std::endl;
+    student obj1(obj);
+    *(obj1.age)=32;
+    std::cout<<"obj, age is :"<<*obj.age<<std::endl;
+    
+  
+
+    return 0;
+}
