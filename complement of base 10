@@ -1,0 +1,20 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include<math.h>
+using  namespace std;
+
+int main() {
+   int num=8,count=0,copy=num,total=0;
+   while(copy>0)
+   {
+    total+=pow(2,count);
+    count++;
+    copy>>=1;
+   }
+   num=~num;
+   int ans=num&total;
+   cout<<ans;
+
+
+    return 0;
+}
