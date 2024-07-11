@@ -1,0 +1,27 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include<math.h>
+using namespace std;
+//reverse the string
+//index=0
+//while(string!='\0')
+//if s[i]==1, number=number+pow(2,index)
+//return number;
+
+
+int main() {
+    string str="11";
+  int number=0,count=0;
+  
+  while(count<str.length())
+  {
+      if(str[count]=='1')
+      {
+          number+=pow(2,str.length()-1-count);
+      }
+      
+      count++;
+  }
+  cout<<number;
+    return 0;
+}
