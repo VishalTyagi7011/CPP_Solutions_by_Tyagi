@@ -1,0 +1,25 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include<algorithm>
+#include<math.h>
+
+
+int main() {
+int number=20,power=5;
+std::string str="";
+while(power!=-1)
+{
+if(number>=pow(2,power))
+{
+    str+="1";
+    number-=pow(2,power);
+}
+else
+str+="0";
+power--;
+}
+
+int x=stoi(str);
+std::cout<<x;
+    return 0;
+}
