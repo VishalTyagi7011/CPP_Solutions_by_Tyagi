@@ -1,0 +1,17 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include<algorithm>
+
+
+int main() {
+int number=15;
+std::string str="";
+while(number!=0)
+{
+    str+=std::to_string(number&1);
+    number>>=1;
+}
+reverse(str.begin(),str.end());
+std::cout<<str;
+    return 0;
+}
