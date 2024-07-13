@@ -1,0 +1,22 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num=45, divi;
+    cout<<"enter the number :";
+    cin>>divi;
+    
+ try 
+ {
+     if(divi==0)
+      throw invalid_argument("divi cant be 0, then result will be infinite");
+     
+ }
+ catch( const invalid_argument &e)
+ {
+     cout<<"Invalid Argument : "<<e.what();
+ }
+
+    return 0;
+}
