@@ -1,0 +1,40 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+bool isSubstring(char *s1, char *s2)
+{
+    int len=0,count=0;
+    auto *temp=s2;
+    while(*s2!='\0')
+    {
+      len++;
+      s2++;
+    }
+    s2=temp;
+    while(*s1!='\0')
+    {
+        if(*s1==*s2)
+        {
+          count++;
+          s1++;
+          s2++;
+          if(count==len)
+          return true;
+        }
+        else
+        {
+            s1++;
+            count=0;
+        }
+    }
+    return false;
+}
+
+int main() {
+    // Write C++ code here
+    string str1="vishal",str2="isha";
+    std::cout << isSubstring(&str1[0],&str2[0]);
+
+    return 0;
+}
