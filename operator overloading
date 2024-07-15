@@ -1,0 +1,38 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+class base
+{
+    public:
+    int real, imagine;
+    
+    base(){}
+    base(int real, int imagine)
+    {
+        this->real=real;
+        this->imagine=imagine;
+    }
+    
+    base operator +(base &obj)
+    {
+        base ans;
+        ans.real=real+obj.real;
+        ans.imagine=imagine+obj.imagine;
+        return ans;
+    }
+    void display()
+    {
+        cout<<real<<"+ i"<<imagine;
+    }
+};
+
+int main() {
+base obj1(3,7);
+base obj2(4,6);
+base obj3=obj1+obj2;
+obj3.display();
+
+
+    return 0;
+}
