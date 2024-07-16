@@ -1,0 +1,74 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+#include <vector>
+#include<algorithm>
+class Animal
+{
+    public:
+    virtual void sound()
+    {
+        std::cout<<"Awaaj\n";
+    }
+};
+class dog:public Animal
+{
+    public:
+    void sound()
+    {
+        std::cout<<"bho bho\n";
+    }
+};
+class cat:public Animal
+{
+    public:
+    void sound()
+    {
+        std::cout<<"meaw\n";
+    }
+};
+class lion:public Animal
+{
+    public:
+    void sound()
+    {
+        std::cout<<"dahad\n";
+    }
+};
+class monkey:public Animal
+{
+    public:
+    void sound()
+    {
+        std::cout<<"kew kew\n";
+    }
+};
+
+int main()
+{
+   Animal *ptr; 
+   lion object;
+   std::vector<Animal *> myvec;
+   myvec.push_back(new dog());
+   myvec.push_back(new cat());
+   myvec.push_back(new lion());
+   myvec.push_back(new monkey());
+   myvec.push_back(new Animal());
+  
+
+  
+   for(int i=0;i<myvec.size();i++)
+   {
+       ptr=myvec[i];
+       
+       ptr->sound();
+   }
+
+    return 0;
+}
