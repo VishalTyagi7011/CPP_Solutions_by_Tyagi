@@ -1,0 +1,86 @@
+//============================================================================
+// Name        : calculator.cpp
+// Author      : Vishal Tyagi
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+using namespace std;
+class Calculator
+{
+public:
+	//double num1, num2;
+
+    void start();
+private:
+    void performaction(char var,double n1,double n2);
+
+
+	double add(double num1, double num2);
+	double multiply(double num1, double num2);
+	double subtract(double num1, double num2);
+	double divide(double num1, double num2);
+
+};
+double Calculator::add(double n1,double n2)
+{
+	return n1+n2;
+}
+double Calculator::multiply(double n1,double n2)
+{
+	return n1*n2;
+}
+double Calculator::subtract(double n1,double n2)
+{
+	return n1-n2;
+}
+double Calculator::divide(double n1,double n2)
+{
+
+	return n1/n2;
+}
+
+void Calculator:: performaction(char var,double n1,double n2)
+{
+	if(var=='*')
+		cout<< multiply(n1,n2);
+	else if(var=='+')
+		cout<<add(n1,n2);
+	else if(var=='/')
+	{   if(n2==0)
+		cout<<"2nd operator should be greater than zero";
+	else
+		cout<<divide(n1,n2);
+	}
+	else if(var=='-')
+		cout<<subtract(n1,n2);
+	else if(var!='*'||var!='/'||var=='-'||var=='+')
+			cout<<"invalid operation\n";
+
+}
+
+void Calculator:: start()
+{
+    double num1,num2;
+	char ch;
+	cout<<"Enter the first operand :";
+	cin>>num1;
+	cout<<"Enter the second operand :";
+	cin>>num2;
+	cout<<"select the one operator( + - * /) : ";
+	cin>>ch;
+	performaction(ch,num1,num2);
+
+}
+
+
+
+
+int main() {
+	Calculator Obj;
+	Obj.start();
+
+	return 0;
+}
