@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+
+int added(int num1, int num2) {
+    return num1 + num2;
+}
+
+int main() {
+    int (*ptr)(int, int) = &added;  // Function pointer assignment
+    cout << ptr(7, 9);  // Call function via pointer
+    return 0;
+}
