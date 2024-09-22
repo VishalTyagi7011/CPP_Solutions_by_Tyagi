@@ -1,1 +1,57 @@
+=====================================================================================
+VARIABLE & DATA TYPES:-
+===================================================================================
+1.	Explain local vs. global variables.
+2.	What are the different types of casting available (static_cast, dynamic_cast, const_cast, and reinterpret_cast)?
+3.	What are the differences between stack and heap memory allocation in terms of variables?
+4.	What happens if you try to use a variable before it is initialized?
+5.	What are the different storage classes in C++?
+
+=====================================================================================
+OPERATORS:-
+=====================================================================================
+1.	Explain the difference between == and = in C++.
+2.	How do comparison operators behave when applied to floating-point numbers? Can you give an example of potential pitfalls?
+3.	Explain short-circuit evaluation in the context of logical operators
+4.	How would you swap two variables using assignment operators without a temporary variable?
+5.	How would you use bitwise operators to check if a number is even or odd?
+6.	What is the difference between == and = in C++?
+7.	Can you compare two floating-point numbers directly using ==? Why or why not?
+8.	What is a ternary operator, and how does it work in C++?
+9.	Explain the fall-through behavior of the switch statement with an example.
+10.	Discuss a scenario where using a ternary operator would be preferred over if-else for conciseness. Provide an example.
+
+=====================================================================================
+FUNCTION :-
+=====================================================================================
+1.	What is an inline function, and how does it differ from a regular function?
+2.	Under what circumstances might the compiler ignore the inline request?
+3.	How would you design an inline function for calculating the area of a rectangle?
+
+=====================================================================================
+ARRAY:-
+=====================================================================================
+1.	Reverse an Array ‘n’ time 
+2.	Search element
+3.	 Remove Duplicates
+4.	Merge Two Sorted Arrays
+5.	Two Sum Problem:
+6.	Find the Missing Number:
+7.	Longest Increasing Subsequence:
+8.	Kth Largest Element:
+9.	maximum sum subarray
+10.	 static array vs dynamic array?
+11.	Sort an array of 0 & 1 & 2element
+
+
+
+
+        
+
+
+
+
+
+
+
 
