@@ -1,15 +1,17 @@
-=====================================================================================
-VARIABLE & DATA TYPES:-
-===================================================================================
+
+
+VARIABLE & DATA TYPES :-
+
 1.	Explain local vs. global variables.
 2.	What are the different types of casting available (static_cast, dynamic_cast, const_cast, and reinterpret_cast)?
 3.	What are the differences between stack and heap memory allocation in terms of variables?
 4.	What happens if you try to use a variable before it is initialized?
 5.	What are the different storage classes in C++?
 
-=====================================================================================
-OPERATORS:-
-=====================================================================================
+========================================================================================================
+
+OPERATORS :-
+
 1.	Explain the difference between == and = in C++.
 2.	How do comparison operators behave when applied to floating-point numbers? Can you give an example of potential pitfalls?
 3.	Explain short-circuit evaluation in the context of logical operators
@@ -21,17 +23,19 @@ OPERATORS:-
 9.	Explain the fall-through behavior of the switch statement with an example.
 10.	Discuss a scenario where using a ternary operator would be preferred over if-else for conciseness. Provide an example.
 
-=====================================================================================
+========================================================================================================
+
 FUNCTION :-
-=====================================================================================
+
 1.	What is an inline function, and how does it differ from a regular function?
 2.	Under what circumstances might the compiler ignore the inline request?
 3.	How would you design an inline function for calculating the area of a rectangle?
 
-=====================================================================================
-ARRAY:-
-=====================================================================================
-1.	Reverse an Array ‘n’ time 
+========================================================================================================
+
+ARRAY :-
+
+1.	Rotate an Array ‘n’ time 
 2.	Search element
 3.	 Remove Duplicates
 4.	Merge Two Sorted Arrays
@@ -42,6 +46,351 @@ ARRAY:-
 9.	maximum sum subarray
 10.	 static array vs dynamic array?
 11.	Sort an array of 0 & 1 & 2element
+12.	Find the minimum element in a rotated sorted array.
+13.	Check if any value appears at least twice in the array.
+14.	Find the length of the longest increasing subsequence in an array.
+
+
+========================================================================================================REFERENCE :-
+1.	What is the difference between passing by value and passing by reference?
+2.	Can you bind a non-const lvalue reference to a temporary object? Why or why not?
+3.	What is a reference to a pointer? How is it different from a reference to an object?
+4.	What is the difference between for (auto x : container) and for (auto& x : container)?
+5.	What is an rvalue reference, and how does it differ from an lvalue reference?
+
+====================================================================================================
+
+POINTERS :-
+
+1.	Explain the difference between a pointer and a reference.
+2.	What is the purpose of the address-of operator (&)?
+3.	What does the dereference operator (*) do?
+4.	What happens if you dereference a null pointer?
+5.	What are some common applications of pointers in C++?
+6.	How do pointers help in passing large structures to functions?
+7.	What is a function pointer?
+8.	What are some advantages of using function pointers?
+9.	How can you pass an array to a function using pointers?
+10.	What is the difference between passing an array and passing a pointer to the first element?
+11.	How do you calculate the size of an array when passed to a function?
+12.	How are pointers and arrays similar?
+13.	How do you check if a pointer is null?
+14.	What issues can arise from using null pointers?
+15.	What is nullptr in C++11, and how does it differ from NULL?
+16.	Why is nullptr preferred over NULL in modern C++?
+17.	Can you give an example of using nullptr in a function?
+18.	What is the result of subtracting two pointers?
+19.	How do you prevent memory leaks when using raw pointers?
+20.	What are the risks associated with pointer arithmetic?
+21.	Pointer to constant , constant pointer  & constant pointer to  constant ?
+
+==========================================================================================================
+
+STRING :-
+
+1.	How do strings differ from character arrays?
+2.	Explain the concept of mutable vs. immutable strings in C++
+3.	What is the null terminator in a C-style string?
+4.	How do you declare and initialize a string using the string class?
+5.	What is the difference between std::string and char*?
+6.	How do you convert a std::string to a C-style string?
+7.	Explain the result of comparing two strings with == and compare() in C++.
+8.	What is lexicographical order in string comparison?
+9.	What methods can be used for string traversal in C++?
+10.	How would you check if a string is a palindrome in C++?
+11.	How can you use strings in file handling in C++?
+12.	What is the difference between string::push_back() and string::append()?
+13.	How do you convert a std::string to uppercase or lowercase in C++?
+14.	Reverse a String
+15.	Check if two strings are anagrams of each other.
+16.	Find the longest common prefix among an array of strings.
+17.	Implement a method to compress a string using counts of repeated characters.
+18.	Count the number of vowels and consonants in a string.
+19.	Find the first non-repeating character in a string.
+20.	Check if one string is a rotation of another (e.g., "waterbottle" is a rotation of "erbottlewat").
+21.	Implement a naive substring search algorithm
+22.	Find the length of the longest substring without repeating characters.
+23.	Generate all permutations of a given string.
+24.	Find the longest palindromic substring in a given string.
+25.	Given an array of strings, group the anagrams together.
+26.	Find the minimum window substring that contains all characters of another string.
+
+=============================================================================================
+
+STRUCTURE & UNION :-
+
+1.	Define a struct in C++. What is its purpose?
+2.	What are the key differences between a struct and a class in C++?
+3.	Can a struct have member functions? Provide an example.
+4.	How do you pass a struct to a function in C++?
+5.	Explain how to use a pointer to a struct.
+6.	What is a struct array? How is it initialized?
+7.	How do you access members of a struct using a pointer?
+8.	Can you define a struct inside another struct? Give an example.
+9.	What are the access specifiers available in a struct?
+10.	Can you inherit from a struct? How is it different from class inheritance?
+11.	When would you prefer using a struct over a class?
+12.	What is the use of a pointer to a struct in dynamic memory allocation?
+13.	How do you define an array of structs in C++?
+14.	What is a struct pointer array, and how is it different from an array of structs?
+15.	How can you return a struct from a function in C++?
+16.	Define a union in C++. What is its purpose?
+17.	How is a union different from a struct?
+18.	What are the limitations of using unions in C++?
+19.	How would you implement a complex number class or struct in C++?
+20.	Explain how to add two complex numbers using a struct.
+21.	Explain how constructors and destructors work with structs and unions.
+
+=====================================================================================
+
+VECTOR :-
+
+1.	What is a vector in C++?
+2.	Vector vs List? 
+3.	How would you find the maximum element in a vector?
+4.	How do you declare a vector?
+5.	What is the difference between a vector and an array?
+6.	operator[] and at() in vector.
+7.	How can you remove elements from a vector?
+8.	What is the time complexity of push_back()?
+9.	What is the time complexity of accessing an element in a vector?
+10.	How does resizing a vector affect performance?
+11.	How to resize a vector ?
+12.	How do you sort a vector in C++?
+13.	What is the difference between std::vector and std::deque?
+14.	Write a function that takes a vector of integers and returns the sum.
+15.	Can vectors hold objects of a class? If so, how?
+16.	What happens when you copy a vector?
+
+==========================================================================================
+
+TEMPLATE :-
+
+1.	What is a function template in C++?
+2.	What are the advantages of using function templates?
+3.	How does template type deduction work in function templates?
+4.	What is the difference between a function template and an overloaded function?
+5.	Can you instantiate a function template with multiple types? Give an example.
+6.	What is a class template in C++?
+7.	What are the benefits of using class templates?
+8.	Give an example of a simple class template for a generic stack.
+9.	How can you use default template arguments in class templates?
+10.	How do you instantiate a class template with different types?
+11.	Explain the difference between full specialization and partial specialization.
+12.	Can you have a function template that is a friend of a class template? Explain.
+13.	How do template parameters affect the compilation of your program?
+14.	What is SFINAE (Substitution Failure Is Not An Error) in C++ templates?
+15.	Explain the concept of variadic templates in C++.
+16.	Can templates be used with inheritance? If so, how?
+17.	What is the difference between template and non-template member functions in a class template?
+18.	What happens if you define a template function or class with the same name in different scopes?
+19.	Can you use templates with structs in C++? Provide an example.
+20.	What is the significance of the typename keyword in template declarations?
+21.	Explain limitation of template.
+
+======================================================================================
+
+OOPS :-
+
+1.	What is a constructor? How is it different from a regular function?
+2.	Explain the purpose of a destructor in C++.
+3.	Can constructors be overloaded? Provide an example.
+4.	What happens if you do not define a destructor in your class?
+5.	Explain the use of default constructors and copy constructors.
+6.	What is the difference between a copy constructor and an assignment operator?
+7.	 How can you initialize class members using an initializer list?
+8.	What is a virtual destructor? Why is it important?
+9.	How does the compiler treat default constructors?
+10.	 Explain the concept of constructor delegation in C++.
+11.	What is the this pointer in C++?
+12.	How is the this pointer used in member functions?
+13.	 Can you modify the this pointer in a member function?
+14.	Explain how this pointer helps in method chaining.
+15.	  What are the implications of using this in overloaded operators?
+16.	What is a static member variable?
+17.	How do static member functions differ from non-static member functions?
+18.	Can static members be accessed without creating an instance of the class?
+19.	Can a static member function access non-static members of the class? Why or why not?
+20.	What is a virtual function, and why is it used?
+21.	How does dynamic binding work in C++?
+22.	Explain the difference between a virtual function and a non-virtual function.
+23.	What happens when a derived class does not override a base class virtual function?
+24.	Can constructors be virtual in C++? Why or why not?
+25.	Explain the concept of overriding and hiding in C++.
+26.	How does the virtual table work in C++?
+27.	What is late binding, and how is it related to virtual functions?
+28.	Can you have virtual destructors? Why are they important?
+29.	How does C++ handle polymorphism through virtual functions?
+30.	What is the "diamond problem," and how can it be resolved in C++?
+31.	How does C++ manage ambiguity in multiple inheritance?
+32.	What is virtual inheritance, and how does it solve the diamond problem?
+33.	What is operator overloading? Provide an example.
+34.	Explain how to overload the increment (++) operator.
+35.	How does operator overloading affect the performance of your code?
+36.	Explain the significance of the const keyword in operator overloading.
+37.	Can you overload the comma (,) operator? Provide an example.
+38.	What are the best practices for operator overloading?
+39.	What is a friend function in C++?
+40.	How does a friend function differ from a member function?
+41.	Can a class be a friend of another class? Explain with an example.
+42.	Can a friend function be a member of another class?
+43.	What is need of friend class ?
+44.	How does friendship affect encapsulation?
+45.	Can a derived class be a friend of the base class? Why or why not?
+46.	Create a base class and a derived class to illustrate the use of virtual functions.
+47.	Implement a class with overloaded operators for addition and subtraction.
+48.	Write a program that demonstrates multiple inheritance and resolves ambiguity.
+49.	Design a class that utilizes static member variables and functions.
+50.	Create an abstract class and derive multiple classes from it.
+51.	Write a friend function to swap two objects of a class.
+52.	 Design a class that uses the this pointer for method chaining.
+53.	  Implement a copy constructor and assignment operator for a class.
+54.	What are move constructors and move assignment operators?
+55.	Explain how RAII works in C++.
+56.	How do smart pointers differ from raw pointers?
+57.	What is the Rule of Three/Five in C++?
+58.	Describe the use of lambda expressions in C++ with an example.
+59.	Explain the concept of encapsulation and its importance in OOP.
+60.	What is the purpose of the override and final keywords?
+61.	Explain the concept of composition vs. inheritance.
+62.	How does C++ handle constructors for base and derived classes during object creation?
+63.	What are default arguments in constructors, and how are they used?
+64.	Describe the effect of using virtual inheritance on object size.
+65.	Discuss the advantages of using interfaces in C++.
+66.	How can you implement a singleton pattern in C++?
+67.	Discuss the differences between shallow copy and deep copy.
+68.	Explain the use of std::shared_ptr and std::unique_ptr.
+69.	How do exceptions work in C++, and how can they be integrated into OOP?
+70.	Can a base class reference point to a derived class object? Provide an example.
+71.	Discuss the role of constructors in managing resources
+72.	How do you achieve polymorphism without inheritance?
+73.	Create a class Person with attributes name and age. Overload the << operator to print the details of a Person object
+74.	Design a simple library management system with classes for Book, Member, and Library. Implement functionalities for adding and borrowing books, using constructors and destructors appropriately.
+
+=====================================================================
+
+EXCEPTION HANDLING :-
+
+1.	What is exception handling in C++?
+2.	What are the keywords used in exception handling in C++?
+3.	What is the difference between an exception and an error?
+4.	How does the try-catch block work?
+5.	What happens if an exception is thrown but not caught?
+6.	Can you have multiple catch blocks for a single try block?
+7.	What is a polymorphic exception?
+8.	Should you catch exceptions by value, by reference, or by pointer? Why?
+9.	How should you handle exceptions in destructors?
+10.	Can exceptions be thrown across different threads?
+11.	What is RAII (Resource Acquisition Is Initialization) and how does it relate to exception safety?
+12.	How does exception handling impact performance?
+
+========================================================================
+
+SMART POINTER & LAMBDA FUNCTION :-
+
+1.	What is a smart pointer in C++?
+2.	How does unique_ptr differ from a regular pointer?
+3.	What are the benefits of using shared_ptr over raw pointers?
+4.	When would you prefer weak_ptr over shared_ptr?
+5.	Can a shared_ptr be copied? Explain how reference counting works.
+6.	Can unique_ptr be stored in a container like std::vector?
+7.	What is a function pointer in C++?
+8.	What are the advantages of using function pointers?
+9.	What is the difference between a function pointer and a function reference?
+10.	How do you create an array of function pointers?
+11.	What are the limitations of function pointers?
+12.	How can you pass a function to another function in C++?
+13.	What is a lambda expression in C++?
+14.	What are the components of a lambda expression?
+15.	What are the differences between capturing by value and capturing by reference?
+16.	How do you specify the return type of a lambda expression?
+17.	What is a lambda expression's syntax for using in STL algorithms?
+18.	Provide an example of a lambda expression that takes two integers and returns their sum.
+19.	How would you use a lambda to filter a vector of integers?
+20.	What is a capture list in lambda expressions?
+21.	Write a function that takes a function pointer as a parameter and calls it.
+22.	implement a function that uses unique_ptr to manage dynamic memory.
+23.	Create a lambda expression that checks if a number is even.
+24.	Write a function that accepts a shared_ptr and returns its value.
+25.	  Design a simple program that demonstrates the use of weak_ptr to avoid circular references.
+
+=======================================================================================
+
+STL :-
+
+1.	What is the Standard Template Library (STL)
+2.	What is the difference between a vector and an array?
+3.	How do you resize a vector?
+4.	What are the advantages of using STL containers?
+5.	What is a map and how is it different from a set?
+6.	How does a multimap differ from a map?
+7.	What is a list and when would you use it over a vector?
+8.	Explain the difference between a deque and a vector.
+9.	What are the differences between a set and a multiset?
+10.	Can you explain how a hash table is implemented in unordered_map?
+11.	What is the time complexity of inserting an element in a vector?
+12.	When would you use a linked list over a vector?
+13.	What are the limitations of using a vector?
+14.	What are some common algorithms provided by STL?
+15.	Explain the difference between sort and stable_sort.
+16.	What is the time complexity of the sort function?
+17.	How would you remove duplicates from a vector using STL?
+18.	Explain how to use transform and give an example
+19.	How does exception handling work in STL algorithms?
+20.	What are some common pitfalls when using STL?
+21.	What are the different types of STL containers?
+22.	Explain the differences between sequence containers and associative containers.
+23.	 What is the purpose of an unordered_set, and how does it differ from a set?
+24.	Can you explain the internal structure of a vector?
+25.	 What are the characteristics of a list, and when would you use it?
+26.	How would you merge two sorted lists into a single sorted list using STL?
+27.	What are the advantages and disadvantages of using a vector?
+28.	When would you choose to use forward_list over list?
+29.	What are the time complexities of common operations in a list?
+30.	What are the advantages of using a deque over a vector?
+31.	What is the time complexity of inserting and deleting elements at both ends of a deque?
+32.	Implement a program to remove all even numbers from a vector using STL functions.
+33.	Create a program to rotate a deque by k positions.
+34.	Given a forward_list, write a function to find the nth element from the end.
+35.	What are the time complexities of common stack operations (push, pop, top)?
+36.	How can you implement a stack using a deque or vector?
+37.	What is a priority queue, and how does it differ from a regular queue?
+38.	Explain how elements are ordered in a priority queue?
+39.	 What underlying container is typically used to implement a priority_queue?
+40.	What are the time complexities for push, pop, and top operations in a priority queue?
+41.	Explain how to merge two priority queues.
+42.	What is associate container ?
+43.	What is a set in C++ STL, and how does it differ from a vector?
+44.	How do you insert, delete, and find elements in a set?
+45.	What is the time complexity for common operations in a set?
+46.	What is a multiset, and how does it differ from a set?
+47.	Discuss a scenario where you would use a multiset over a set.
+48.	What is a map in C++, and what are its key features?
+49.	How do you insert, access, and delete elements in a map?
+50.	What is a multimap, and how does it differ from a map?
+51.	What is the difference between an ordered container (like set) and an unordered container (like unordered_set)?
+52.	Explain how unordered_set maintains its elements.
+53.	What are the benefits of using unordered_set compared to set?
+54.	What is the time complexity for inserting and searching elements in an unordered_set?
+55.	What is an unordered_map, and how does it differ from a regular map?
+56.	How do you choose between using a set and an unordered_set?
+57.	What are non-mutating algorithms in STL, and how do they differ from mutating algorithms?
+58.	What is the time complexity of the count algorithm?
+59.	What are mutating algorithms in STL, and why are they important?
+60.	Explain how the sort algorithm works. What is its time complexity?
+61.	How do you use the reverse algorithm, and what are its time complexities?
+62.	Discuss the role of function objects (functors) and lambdas in STL algorithms.
+63.	Provide an example of using multiple algorithms together in a single operation
+
+
+
+
+
+
+
+
+
+
 
 
 
