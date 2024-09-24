@@ -1,2 +1,12 @@
 VARIABLE & DATA TYPES :-
 
+ 1.	Explain local vs. global variables.
+ Ans:-   Local Variables:         (i).Defined within a function or a block and can only be accessed within that function or block. 
+                                  (ii). They are created when the function is called and destroyed when the function exits.
+         Global Variables:        (i).Defined outside of all functions and can be accessed by any function within the same file (or other files if declared with extern).
+                                  (ii). They exist for the entire duration of the program.
+------------------------------------------------------------------------------------------------------------------------
+2. What are the different types of casting available (static_cast, dynamic_cast, const_cast, and reinterpret_cast)?
+
+
+
