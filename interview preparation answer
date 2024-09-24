@@ -1,4 +1,6 @@
-VARIABLE & DATA TYPES :-
+======================================================================================================
+--------------------------------------VARIABLE & DATA TYPES ------------------------------------------
+======================================================================================================
 
  1.	Explain local vs. global variables.
  Ans:-   Local Variables:         (i).Defined within a function or a block and can only be accessed within that function or block. 
@@ -103,9 +105,103 @@ Ans :- (i)    Auto
        (iii). Register
        (iv)   Extern
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+======================================================================================================================================
 -------------------------------------------------OPERATORS---------------------------------------------------------------------------
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+======================================================================================================================================
+
+1.	Explain the difference between == and = in C++.
+Ans : (i). "==" is comparisonal operator and "=" is assignment operator.
+      (ii). "==" compares two variable i.e they are equal or not. eg. (4==5) return 0.
+      (iii) "=" assigns value to a variable. eg int a=5;
+
+------------------------------------------------------------------------
+2.How do comparison operators behave when applied to floating-point numbers? Can you give an example of potential pitfalls?
+  Ans :-
+ double a = (0.3 * 3) + 0.1;
+	double b = 1;
+	compare (a==b) // not equal.
+
+ getting correct answer by fixing:
+  if (abs(a - b) < 1e-9) {
+        cout << "The numbers are equal "
+             << endl;
+
+----------------------------------------------------------------------------------------
+3. Explain short-circuit evaluation in the context of logical operators
+Ans :- example:
+ (i). if(a>b && b>c&& c>d) :- if (a>b) is false, then remaining part(&& b>c&& c>d) of this condition  will not check and answer will be false.
+ (ii). if(a>b || b>c|| c>d) :- if (a>b) is true, then remaining part(&& b>c&& c>d) of this condition  will not check and answer will be true.
+
+--------------------------------------------------------------------------------------------
+4.	How would you swap two variables using assignment operators without a temporary variable?
+Ans . int main() {
+   int a=5, b=10;
+   a=a^b;
+   b=a^b;
+   a=a^b;
+   
+  cout<<"a is :"<<a<<endl<<"b is :"<<b;
+
+    return 0;
+}
+-----------------------------------------------------------------------------------------
+5. How would you use bitwise operators to check if a number is even or odd?
+Ans . if (number & 1==1) , it is odd, otherwise(number & 1==0) will be even.
+
+----------------------------------------------------------------------------------------
+6. What is a ternary operator, and how does it work in C++?
+Ans :- (i).Ternary operator is the shortest form of conditional statement . 
+       (ii).it syntax is : datatype variable=(condition)?"True statement":"false statatement";
+       (iii).int main() {
+            string  result =5>2?"yes":"no";
+            cout<<result;
+            return 0;
+             }
+
+------------------------------------------------------------------------------------------
+7.	Explain the fall-through behavior of the switch statement with an example.
+Ans :- If there is 'no' break keyword used in statement which is true, then it will execute  other statement also.
+       Example:
+#include <stdio.h>
+
+int main() {
+    int day = 3;
+
+    switch (day) {
+        case 1:
+            printf("Monday\n");
+            // No break, will fall through to case 2
+        case 2:
+            printf("Tuesday\n");
+            // No break, will fall through to case 3
+        case 3:
+            printf("Wednesday\n");
+            // No break, will fall through to case 4
+        case 4:
+            printf("Thursday\n");
+            break; // Breaks out of the switch
+        case 5:
+            printf("Friday\n");
+            break; // This will not be executed
+        default:
+            printf("Invalid day\n");
+    }
+
+    return 0;
+}
+-----------------------------------------------------------------------------------------
+8.	Discuss a scenario where using a ternary operator would be preferred over if-else for conciseness. Provide an example.
+Ans. (i) The ternary operator is often preferred over if-else statements when you want to assign a value based on a simple condition.
+    (ii).The ternary operator reduces the amount of code you need to write.
+
+
+
+================================================================================================
+------------------------------------FUNCTIONS--------------------------------------------------
+================================================================================================
+
 
 
 
