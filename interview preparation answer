@@ -3,12 +3,14 @@
 ======================================================================================================
 
  1.	Explain local vs. global variables.
+
  Ans:-   Local Variables:         (i).Defined within a function or a block and can only be accessed within that function or block. 
                                   (ii). They are created when the function is called and destroyed when the function exits.
          Global Variables:        (i).Defined outside of all functions and can be accessed by any function within the same file (or other files if declared with extern).
                                   (ii). They exist for the entire duration of the program.
 ------------------------------------------------------------------------------------------------------------------------
 2. What are static_cast and dynamic_cast?
+
 Ans :-   Static Cast  :            (i) Static_cast is a casting operator which is used to convert data type of a variable into another data type .
                                    (ii). Syntax : static_cast<datatype>(variable_name);
                                    (iii).  Example :- int main() 
@@ -73,6 +75,7 @@ Ans :-   Static Cast  :            (i) Static_cast is a casting operator which i
 
 -----------------------------------------------------------------------------------
 3. What are the differences between stack and heap memory allocation in terms of variables?
+
 Ans :- STACK :- 
                  (i). Memory is managed automatically.
                  (ii).Variables are created when a function is called and destroyed when the function returns.
@@ -86,6 +89,7 @@ Ans :- STACK :-
 
 ---------------------------------------------------------------------------------------
 4.What happens if you try to use a variable before it is initialized?
+
 Ans :- unpredicatable behaviour, value of variable will be garbage. expample:
 #include <iostream>
 using namespace std;
@@ -100,6 +104,7 @@ int main()
 }
 --------------------------------------------------------------------------------------
 5. What are the different storage classes in C++?
+
 Ans :- (i)    Auto
        (ii).  Static
        (iii). Register
@@ -148,10 +153,12 @@ Ans . int main() {
 }
 -----------------------------------------------------------------------------------------
 5. How would you use bitwise operators to check if a number is even or odd?
+
 Ans . if (number & 1==1) , it is odd, otherwise(number & 1==0) will be even.
 
 ----------------------------------------------------------------------------------------
 6. What is a ternary operator, and how does it work in C++?
+
 Ans :- (i).Ternary operator is the shortest form of conditional statement . 
        (ii).it syntax is : datatype variable=(condition)?"True statement":"false statatement";
        (iii).int main() {
@@ -162,6 +169,7 @@ Ans :- (i).Ternary operator is the shortest form of conditional statement .
 
 ------------------------------------------------------------------------------------------
 7.	Explain the fall-through behavior of the switch statement with an example.
+
 Ans :- If there is 'no' break keyword used in statement which is true, then it will execute  other statement also.
        Example:
 #include <stdio.h>
@@ -193,6 +201,7 @@ int main() {
 }
 -----------------------------------------------------------------------------------------
 8.	Discuss a scenario where using a ternary operator would be preferred over if-else for conciseness. Provide an example.
+
 Ans. (i) The ternary operator is often preferred over if-else statements when you want to assign a value based on a simple condition.
     (ii).The ternary operator reduces the amount of code you need to write.
 
@@ -201,6 +210,56 @@ Ans. (i) The ternary operator is often preferred over if-else statements when yo
 ================================================================================================
 ------------------------------------FUNCTIONS--------------------------------------------------
 ================================================================================================
+1.	What is an inline function, and how does it differ from a regular function?
+Ans:-
+Inline function is a function which is expanded in line when it is called.When the inline function is called whole code
+of the inline function gets inserted or substituted at the point of the inline function call.Remember, inlining is only
+a request to the compiler, not a command. The compiler can ignore the request for inlining. 
+BENEFIT :- Faster execution
+DISADVANTAGE :-more binary size, cannot use for recursive(result will be infinite loop)
+Example:
+inline int square(int x) {
+    return x * x;
+}
+
+int main() {
+    int result = square(5); // Compiler may replace this with `result = 5 * 5;`
+}
+----------------------------------------------------------------------------------------------------------
+2. Under what circumstances might the compiler ignore the inline request?
+Ans:- 
+(i) Recursive function
+(ii) Function with pointer parameter .eg.func(int *ram)
+(iii) function complex
+
+------------------------------------------------------------------------------------------------
+3.	How would you design an inline function for calculating the area of a rectangle?
+Ans:-
+#include <iostream>
+
+// Inline function to calculate the area of a rectangle
+inline double areaOfRectangle(double length, double width) {
+    return length * width;
+}
+
+int main() {
+    double length = 5.0;
+    double width = 3.0;
+    
+    double area = areaOfRectangle(length, width);
+    std::cout << "Area of the rectangle: " << area << std::endl;
+
+    return 0;
+}
+
+
+================================================================================================
+--------------------------------------ARRAY-----------------------------------------------------
+================================================================================================
+
+
+
+
 
 
 
