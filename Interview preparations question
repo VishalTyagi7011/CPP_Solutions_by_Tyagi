@@ -47,6 +47,9 @@ ARRAY :-
 12.	Find the minimum element in a rotated sorted array.
 13.	Check if any value appears at least twice in the array.
 14.	Find the length of the longest increasing subsequence in an array.
+15.     Can you explain the difference between sizeof(arr) and sizeof(*arr) when dealing with arrays?
+16.     What happens if you try to access an element outside the bounds of an array?
+17.     How can you copy an array in C++?
 
 
 ========================================================================================================REFERENCE :-
