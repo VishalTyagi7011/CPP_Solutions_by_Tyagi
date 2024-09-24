@@ -257,6 +257,85 @@ int main() {
 --------------------------------------ARRAY-----------------------------------------------------
 ================================================================================================
 
+1. Rotate an Array ‘n’ time 
+Ans :-
+
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() {
+int arr[]={1,2,3,4,5},size=sizeof(arr)/sizeof(arr[0]),rotation_time;
+cout<<"Enter the number of time to rotate an array :";
+cin>>rotation_time;
+
+rotation_time%=size;
+reverse(arr,arr+rotation_time);
+reverse(arr+rotation_time,arr+size);
+reverse(arr,arr+size);
+
+//printing element
+for(int i:arr)
+cout<<i<<" ";
+
+    return 0;
+}
+------------------------------------------------------------------
+2. Search element in Array
+Ans :-// Online C++ compiler to run C++ program online
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() {
+int arr[]={1,2,3,4,5},size=sizeof(arr)/sizeof(arr[0]),element;
+bool flag=false;
+cout<<"Enter the element to search in array :";
+cin>>element;
+for(int i=0;i<size;i++)
+{
+    if(arr[i]==element)
+    {
+        cout<<"element is found";
+        flag=true;
+    }
+}
+if(!flag)
+{
+    cout<<"element not found";
+    
+}
+  return 0;
+}
+
+-------------------------------------------------------------------------------------
+3.Remove duplicates from an Array .
+Ans:-
+#include <iostream>
+#include <unordered_set>
+using namespace std;
+
+int main() {
+    int arr[] = {1, 2, 3, 2, 4, 5, 5, 1};
+    int size = sizeof(arr) / sizeof(arr[0]);
+
+    // Use an unordered set to eliminate duplicates
+    unordered_set<int> myset(arr, arr + size);
+
+    // Print unique elements directly from the unordered set
+    for (const int& i : myset) {
+        cout << i << " ";
+    }
+
+    cout << endl; // Add a newline for better output format
+
+    return 0;
+}
+
+-------------------------------------------------------------------------
+4.
+
+
 
 
 
