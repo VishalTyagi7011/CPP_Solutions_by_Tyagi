@@ -381,6 +381,15 @@ STL :-
 61.	How do you use the reverse algorithm, and what are its time complexities?
 62.	Discuss the role of function objects (functors) and lambdas in STL algorithms.
 63.	Provide an example of using multiple algorithms together in a single operation
+64.     what is diamond problem in cpp.
+65.     drawback of multiple inheritance ?
+66.     how to solve ambuiguity error.?
+
+
+===================================================================================
+MISCELLINEOUS :-
+
+1.    swap any two bit of a number.
 
 
 
