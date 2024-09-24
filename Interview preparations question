@@ -17,11 +17,9 @@ OPERATORS :-
 3.	Explain short-circuit evaluation in the context of logical operators
 4.	How would you swap two variables using assignment operators without a temporary variable?
 5.	How would you use bitwise operators to check if a number is even or odd?
-6.	What is the difference between == and = in C++?
-7.	Can you compare two floating-point numbers directly using ==? Why or why not?
-8.	What is a ternary operator, and how does it work in C++?
-9.	Explain the fall-through behavior of the switch statement with an example.
-10.	Discuss a scenario where using a ternary operator would be preferred over if-else for conciseness. Provide an example.
+6.	What is a ternary operator, and how does it work in C++?
+7.	Explain the fall-through behavior of the switch statement with an example.
+8.	Discuss a scenario where using a ternary operator would be preferred over if-else for conciseness. Provide an example.
 
 ========================================================================================================
 
