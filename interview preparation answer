@@ -6,7 +6,107 @@ VARIABLE & DATA TYPES :-
          Global Variables:        (i).Defined outside of all functions and can be accessed by any function within the same file (or other files if declared with extern).
                                   (ii). They exist for the entire duration of the program.
 ------------------------------------------------------------------------------------------------------------------------
-2. What are the different types of casting available (static_cast, dynamic_cast, const_cast, and reinterpret_cast)?
+2. What are static_cast and dynamic_cast?
+Ans :-   Static Cast  :            (i) Static_cast is a casting operator which is used to convert data type of a variable into another data type .
+                                   (ii). Syntax : static_cast<datatype>(variable_name);
+                                   (iii).  Example :- int main() 
+                                           {
+                                            for(int i=65;i<=90;i++)
+                                            {
+                                                cout<<static_cast<char>(i);
+                                                cout<<endl;
+                                            }
+                                            return 0;
+                                            }
+
+         Dynamic Cast :             (i). Dynamic_cast is a operator which converts data from one to another(int to float, int to double) etc.
+                                    (ii). There should be always a virtual function in base class to acheive dynamic cast. 
+                                    (iii). There should be polymorphic base class and Dynamic_cast works on RTTI(Run time type information);
+                                     (iv)             class Base {
+                                                      public:
+                                                          virtual void print() {
+                                                              cout << "base class function" << endl;
+                                                          }
+                                                      };
+                                                      
+                                                      class Derived : public Base {
+                                                      public:
+                                                          int a = 6;
+                                                          
+                                                          void printff() {
+                                                              cout << "derived class function" << endl;
+                                                          }
+                                                      };
+                                                      
+                                                      int main() {
+                                                          Base *baseptr = new Derived(); // Create an instance of  Derived
+                                                          Derived *derptr = dynamic_cast<Derived*>(baseptr); //Safe downcast
+                                                      
+                                                          if (derptr) { // Check if the cast was successful
+                                                              derptr->print();    // Call the base class function
+                                                              derptr->printff();  // Call the derived class  function
+                                                          } else {
+                                                              cout << "Cast failed!" << endl; // Handle unsuccessful cast
+                                                          }
+                                                      
+                                                          delete baseptr; // Clean up
+                                                          return 0;
+                                                      }
+                                                      
+
+                                                   int main() {
+                                                    Base *baseptr = new Derived(); // Create an instance of Derived
+                                                   Derived *derptr = dynamic_cast<Derived*>(baseptr); // Safe downcast
+
+                                                    if (derptr) { // Check if the cast was successful
+                                                    derptr->print();    // Call the base class function
+                                                    derptr->printff();  // Call the derived class function
+                                                    } else {
+                                                   cout << "Cast failed!" << endl; // Handle unsuccessful cast
+                                                   }
+
+                                                   delete baseptr; // Clean up
+                                                      return 0;
+                                                    }
+
+-----------------------------------------------------------------------------------
+3. What are the differences between stack and heap memory allocation in terms of variables?
+Ans :- STACK :- 
+                 (i). Memory is managed automatically.
+                 (ii).Variables are created when a function is called and destroyed when the function returns.
+                 (iii)..Generally has a smaller size limit (usually in the range of a few megabytes).
+                 (iv).Faster access because of its LIFO structure and locality in memory.
+       QUEUE :-
+                  (i).Memory is managed manually by the programmer using new and delete.
+                  (ii).Variables exist until they are explicitly deleted.
+                  (iii).Typically larger and can grow as needed, limited mainly by system memory.
+                   (iv).Slower access due to the overhead of dynamic memory management.
+
+---------------------------------------------------------------------------------------
+4.What happens if you try to use a variable before it is initialized?
+Ans :- unpredicatable behaviour, value of variable will be garbage. expample:
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int arr[5]; // Uninitialized array
+    for (int i = 0; i < 5; ++i) {
+        cout << arr[i]; // Undefined behavior: elements may hold garbage values
+    }
+    return 0;
+}
+--------------------------------------------------------------------------------------
+5. What are the different storage classes in C++?
+Ans :- (i)    Auto
+       (ii).  Static
+       (iii). Register
+       (iv)   Extern
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-------------------------------------------------OPERATORS---------------------------------------------------------------------------
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 
 
 
