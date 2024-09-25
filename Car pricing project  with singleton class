@@ -1,0 +1,56 @@
+#include <iostream>
+using namespace std;
+
+class Singleton {
+    static Singleton *instance;
+    string company;
+    string model;
+    double newCarPrice;
+    int carUsedInYear;
+
+    // Private constructor
+    Singleton() : company("none"), model("none"), newCarPrice(0), carUsedInYear(0) {}
+
+public:
+    // Static method to get the singleton instance
+    static Singleton *getInstance() {
+        if (instance == nullptr) {
+            instance = new Singleton();
+        }
+        return instance;
+    }
+
+    // Set data for the car
+    void setData(string company, string model, double newCarPrice, int carUsedInYear) {
+        this->company = company;
+        this->model = model;
+        this->newCarPrice = newCarPrice;
+        this->carUsedInYear = carUsedInYear;
+    }
+
+    // Calculate and display the car price
+    void getCarPrice() {
+        double price = newCarPrice - ((newCarPrice / 100) * (5 * carUsedInYear));
+        cout << "Car company: " << company << endl;
+        cout << "Car model: " << model << endl;
+        cout << "New car price: " << newCarPrice << endl;
+        cout << "Car used in years: " << carUsedInYear << endl;
+        cout << "Current price of car is: " << price << endl;
+    }
+};
+
+// Initialize the static member
+Singleton *Singleton::instance = nullptr;
+
+int main() {
+    // Get the singleton instance
+    Singleton *obj = Singleton::getInstance();
+    
+    // Set car data
+    obj->setData("Maruti Suzuki", "Alto", 800000.00, 1);
+    
+    // Get car price
+    obj->getCarPrice();
+
+    return 0;
+}
