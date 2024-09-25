@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+
+class createDisplay {
+    static createDisplay *ptr;
+    int length;
+    int breadth;
+    int height;
+    string color;
+
+    // Private constructor
+    createDisplay() {}
+
+public:
+    void setdata(int length, int breadth, int height, string color) {
+        this->length = length;
+        this->breadth = breadth;
+        this->height = height;
+        this->color = color;
+    }
+
+    void display() {
+        cout << "length is: " << length << endl;
+        cout << "breadth is: " << breadth << endl;
+        cout << "height is: " << height << endl;
+        cout << "color is: " << color << endl;
+    }
+
+    static createDisplay *getinstance() {
+        if (ptr == nullptr) {
+            ptr = new createDisplay();
+        }
+        return ptr;
+    }
+};
+
+// Initialize static member
+createDisplay *createDisplay::ptr = nullptr;
+
+int main() {
+    createDisplay *obj = createDisplay::getinstance();
+    obj->setdata(2, 4, 6, "red");
+    obj->display();
+
+    return 0;
+}
