@@ -333,7 +333,193 @@ int main() {
 }
 
 -------------------------------------------------------------------------
-4.
+4. Merge two sorted Array :-
+Ans :-
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr1[] = {1, 4, 7, 9, 12, 18, 34};
+    int arr2[] = {2, 5, 9, 16, 19, 26};
+    int size1 = sizeof(arr1) / sizeof(arr1[0]);
+    int size2 = sizeof(arr2) / sizeof(arr2[0]);
+    int temp[size1 + size2];
+    int index = 0, i = 0, j = 0;
+
+    while (i < size1 && j < size2) {
+        if (arr1[i] <= arr2[j]) {
+            temp[index] = arr1[i];
+            i++;
+        } else {
+            temp[index] = arr2[j];
+            j++;
+        }
+        index++;
+    }
+
+    while (i < size1) {
+        temp[index] = arr1[i];
+        i++;
+        index++;
+    }
+
+    while (j < size2) {
+        temp[index] = arr2[j];
+        j++;
+        index++;
+    }
+
+    // Print the merged array
+    for (int k = 0; k < size1 + size2; k++) {
+        cout << temp[k] << " ";
+    }
+    
+    return 0;
+}
+------------------------------------------------------------------------
+5.	Two Sum Problem 
+Ans :-#include <iostream>
+#include <algorithm> // For std::sort
+using namespace std;
+
+int main() {
+    int arr[] = {1, 6, 9, 2, 2, 3, 5, 6, 8};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    int target = 20;
+    
+    // Sort the array
+    sort(arr, arr + size);
+
+    int start = 0, end = size - 1;
+    bool flag = false;
+
+    while (start < end) {
+        int sum = arr[start] + arr[end];
+
+        if (sum == target) {
+            cout << "Element found at indices: " << start << " & " << end << endl;
+            flag = true;
+            break;
+        } else if (sum > target) {
+            end--;
+        } else {
+            start++;
+        }
+    }
+
+    if (!flag) {
+        cout << "No elements found that sum to " << target << endl;
+    }
+
+    return 0;
+}
+-------------------------------------------------------------------------------
+6.	Find the Missing Number in array .
+Ans :-
+#include <iostream>
+#include <numeric>
+using namespace std;
+
+int main() {
+    int arr[] = {1, 2, 3, 4, 6, 7, 8, 9};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    
+    // Calculate the actual sum of the array
+    int arr_sum = accumulate(arr, arr + size, 0);
+    
+    // Calculate the expected sum from 1 to max number in the array
+    int max_num = size+1; // You can also determine this dynamically if needed
+    int expected_sum = (max_num * (max_num + 1)) / 2;
+    
+    // Find the missing number
+    int missingNum = expected_sum - arr_sum;
+    
+    cout << "Missing number is: " << missingNum << endl;
+
+    return 0;
+}
+
+------------------------------------------------------------------
+7.	Longest Increasing Subsequence in Array 
+Ans:-
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Write C++ code here
+    int arr[]={10,9,2,5,3,7,101,18},size=sizeof(arr)/sizeof(arr[0]),count=1,max_len=1;
+    for(int i=0;i<size-1;i++)
+    {
+         count=1;
+        for(int j=i+1;j<size;j++)
+        {
+          if(arr[i]<arr[j])
+          {
+              
+              count++;
+              arr[i]=arr[j];
+              max_len=max(max_len,count);
+          }
+        }
+      
+       
+    }
+    cout<<max_len;
+
+    return 0;
+}
+
+------------------------------------------------------------------
+8.	Kth Largest Element in c++
+Ans:-
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include<algorithm>
+using namespace std;
+
+int main() {
+    // Write C++ code here
+    int arr[]={10,9,2,5,3,7,101,18},size=sizeof(arr)/sizeof(arr[0]),nthnum=1;
+    sort(arr,arr+size,greater<int>());
+    cout<<nthnum<<" largest num is :"<<arr[nthnum-1];
+
+
+    return 0;
+}
+
+-----------------------------------------------------------------------
+ 9.	maximum sum subarray
+Ans:- // Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Write C++ code here
+int arr[]={5,4,-1,7,8};
+int size=sizeof(arr)/sizeof(arr[0]);
+int maxSum=0,curSum=0,start=0,end=0;
+for(int i=0;i<size;i++)
+{
+    curSum+=arr[i];
+    if(curSum>maxSum)
+    {
+        end=i;
+        maxSum=curSum;
+        
+    }
+    if(curSum<0)
+    {
+        start=i+1;
+        curSum=0;
+    }
+}
+cout<<maxSum<<" "<<start<<" "<<end;
+
+    return 0;
+}
+-----------------------------------------------------------
+
 
 
 
