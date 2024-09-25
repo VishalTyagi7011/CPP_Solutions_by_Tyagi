@@ -656,7 +656,20 @@ return 0;
 =----------               REFERENCE             --------------------=
 =====================================================================
 
+3.	What is a reference to a pointer? How is it different from a reference to an object?
+Ans:-
+A reference to a pointer is a reference which points to  pointer and can change the pointer value directly.E.g
+#include <iostream>
+int main() {
+    // Write C++ code here
+    int var=10;
+    int *ptr=&var;
+    int *&reftoptr=ptr;
+     *reftoptr=50;
+    std::cout<<var;
 
+    return 0;
+}
 
 
 
