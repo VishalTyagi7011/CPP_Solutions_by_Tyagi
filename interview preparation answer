@@ -254,7 +254,7 @@ int main() {
 
 
 ================================================================================================
---------------------------------------ARRAY-----------------------------------------------------
+=------------                         ARRAY                                           ---------=
 ================================================================================================
 
 1. Rotate an Array ‘n’ time 
@@ -519,6 +519,142 @@ cout<<maxSum<<" "<<start<<" "<<end;
     return 0;
 }
 -----------------------------------------------------------
+10. What is Static Array & Dynamic Array?
+Ans:-
+Static Arrays:-
+(i)Memory Allocation: Allocated at compile time.
+(ii)Size: Fixed; cannot be resized after declaration.
+(iii).example: int arr[10]; 
+
+Dynamic Arrays:
+(i)Memory Allocation: Allocated at run time using new operator.
+(ii)Size:can be resized after declaration.
+(iii).example: int *arr=new int[size];
+(iv) . delete operator is very important to deallocate the memory for dynamic array.
+
+
+------------------------------------------------------------------------
+11.	Sort an array of 0 & 1 & 2element
+Ans.// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Write C++ code here
+int arr[]={2, 0, 1, 2, 0, 1, 0};
+int size=sizeof(arr)/sizeof(arr[0]);
+int zero=0,two=size-1;
+for(int i=0;i<size;i++)
+{
+  if(arr[i]==0)
+  {
+      swap(arr[i],arr[zero]);
+      zero++;
+  }
+  else if(arr[i]==2)
+  {
+      swap(arr[two],arr[i]);
+       two--;
+       i--;
+  }
+}
+for(int i:arr)
+cout<<i<<" ";
+
+    return 0;
+}
+------------------------------------------------------------------
+12.	Find the minimum element in a rotated sorted array.
+Ans :-
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include<algorithm>
+using namespace std;
+
+int main() {
+    // Write C++ code here
+int arr[]={4, 5, 6, 7, 0, 1, 2};
+int size=sizeof(arr)/sizeof(arr[0]);
+
+int *minn=min_element(arr,arr+size);
+cout<<"minimum element is :"<<*minn;
+
+
+    return 0;
+}
+
+----------------------------------------------------------------
+13.	Check if any value appears at least twice in the array.
+Ans:-
+#include <iostream>
+#include <unordered_map>
+using namespace std;
+
+int main() {
+    int arr[] = {4, 5, 6, 7, 0, 1, 2, 1, 4, 2};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    unordered_map<int, int> ump;
+
+    // Count occurrences of each element
+    for (int i = 0; i < size; i++) {
+        ump[arr[i]]++;
+    }
+
+    // Print elements that appear more than once
+    cout << "Duplicate elements: ";
+    bool found = false; // Flag to check if any duplicates were found
+    for (const auto& pair : ump) {
+        if (pair.second > 1) {
+            cout << pair.first << " ";
+            found = true;
+        }
+    }
+
+    if (!found) {
+        cout << "No duplicates found.";
+    }
+
+    cout << endl; // New line for better output formatting
+    return 0;
+}
+---------------------------------------------------------------------------------
+15.     Can you explain the difference between sizeof(arr) and sizeof(*arr) when dealing with arrays?
+Ans:-
+(i).sizeof(arr):- complete array size will be print;
+(ii).sizeof(*arr) :- only first element size print.
+(iii).
+int arr[]={4, 5, 6};
+cout<<"sizeof(arr) :"<<sizeof(arr)<<endl; // print 12
+cout<<"sizeof(*arr) :"<<sizeof(*arr);// print 4
+
+---------------------------------------------------------------------
+16.     What happens if you try to access an element outside the bounds of an array?
+Ans :-
+element will be found but with garbage value;
+
+-----------------------------------------------------------------
+17.  How can you copy an array in C++?
+Ans:-
+(i). Using for loop 
+(ii)Using copy function, Example below:
+#include <iostream>
+#include<algorithm>
+using namespace std;
+
+int main() {
+    // Write C++ code here
+int arr[]={4, 5, 6,12,34,56};
+int size=sizeof(arr)/sizeof(arr[0]);
+
+int temp[size];
+copy(arr, arr+size,temp);
+for(int i:temp)
+cout<<i<<" ";
+return 0;
+}
+=====================================================================
+=----------               REFERENCE             --------------------=
+=====================================================================
 
 
 
