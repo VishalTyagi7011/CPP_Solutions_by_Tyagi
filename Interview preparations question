@@ -84,6 +84,7 @@ POINTERS :-
 19.	How do you prevent memory leaks when using raw pointers?
 20.	What are the risks associated with pointer arithmetic?
 21.	Pointer to constant , constant pointer  & constant pointer to  constant ?
+22.     Where we should use Pointer and where we should use Reference.
 
 ==========================================================================================================
 
