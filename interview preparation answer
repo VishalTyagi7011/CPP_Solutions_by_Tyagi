@@ -6,8 +6,12 @@
 
  Ans:-   Local Variables:         (i).Defined within a function or a block and can only be accessed within that function or block. 
                                   (ii). They are created when the function is called and destroyed when the function exits.
-         Global Variables:        (i).Defined outside of all functions and can be accessed by any function within the same file (or other files if declared with extern).
-                                  (ii). They exist for the entire duration of the program.
+                                  (iii). Local Variable are stored in Stack.
+                                   (iv). Default value of local variable is garbage value.
+         Global Variables:        (i).   Defined outside of all functions and can be accessed by any function within the same file (or other files if declared with extern).
+                                  (ii).  They exist for the entire duration of the program.
+                                  (iii). Memory allocated to global variable in Data Segment.
+                                  (iv).  Default value is 0.
 ------------------------------------------------------------------------------------------------------------------------
 2. What are static_cast and dynamic_cast?
 
