@@ -676,6 +676,26 @@ int main() {
 }
 
 
+============================================================================
+------------             POINTERS        -----------------------------------
+============================================================================
+
+1.Explain the difference between the pointer and reference.
+Ans:-
+   POINTER :- 1. A pointer is a vaiable that holds the address of another variable.
+              2. It is used for dynamically memory allocation.
+              3. It has separate memory location.
+              4. the pointer can be NULL and may be type of 'void'.
+              5. we can declare pointer and initialize it later.
+
+  REFERENCE :- 1. A reference is an alias for an existing variable.
+               2. it is useful when we want to avoid from extra copy of an object.
+               3. It cannot be NULL and 'void' datatype also.
+               4. when we declare reference then immediately initialization is compulsory. 
+               5. uses in function parameter.
+
+
+              
 
 
 
