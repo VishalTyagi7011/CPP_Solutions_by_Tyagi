@@ -119,6 +119,145 @@ int main()
 }
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------------------------------------
+Reverse the string
+-----------------------------------------------------------------------
+
+
+#include <iostream>
+
+std::string ReverseString(std::string str)
+{
+    int len=str.length();
+    for(int i=0;i<len/2;++i)
+    {
+        char temp=str[i];
+        str[i]=str[len-1-i];
+        str[len-1-i]=temp;
+    }
+    return str;
+}
+
+int main()
+{
+    std::cout<<ReverseString("my name is vishal");
+
+    return 0;
+}
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+------------------------------------------------------------
+ Find the count maximum consecutive of 1's in an array
+------------------------------------------------------------
+
+
+#include <iostream>
+
+int maxConsecutive(int arr[],int len)
+{
+    int ans=0,count=0;
+    for(int i=0;i<len;i++)
+    {
+        if(arr[i]==1)
+        {
+            count++;
+            if(count>ans)
+            {
+                ans=count;
+            }
+        }
+        else
+        {
+            count=0;
+        }
+    }
+    return ans;
+}
+
+int main()
+{
+    int arr[] = {1, 1, 0, 1, 1, 1, 0, 1, 1,1,1},len=sizeof(arr)/sizeof(arr[0]);
+    std::cout<<maxConsecutive(arr,len);
+
+    return 0;
+}
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+---------------------------------------------------------------
+calculate factorial of a number 
+---------------------------------------------------------------
+
+#include <iostream>
+
+int Factorial(int num)
+{
+   if(num==1 || num==0)
+   return 1;
+   
+return num*Factorial(num-1);
+}
+
+int main()
+{
+    std::cout<<Factorial(5);
+
+    return 0;
+}
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------------------------
+merge two sorted array 
+-----------------------------------------------------------
+
+
+#include <iostream>
+
+void MergeSortedArray(int arr1[],int len1, int arr2[],int len2)
+{
+    int totalLen=len1+len2,left=0,right=0;
+    int ans[totalLen];
+    for(int i=0;i<totalLen;i++)
+    {
+        if(left==len1)
+        {
+          ans[i]=arr2[right];
+          right++;
+        }
+        else if(right==len2)
+        {
+          ans[i]=arr1[left];
+          left++;
+        }
+        
+       else if(arr1[left]<=arr2[right])
+       {
+           ans[i]=arr1[left];
+           left++;
+       }
+       else
+       {
+           ans[i]=arr2[right];
+           right++;
+       }
+       
+       std::cout<<ans[i]<<" ";
+    }
+
+}
+
+int main()
+{
+    int arr1[]={5,6,7,12,34,67,90} ,  len1=sizeof(arr1)/sizeof(arr1[0]), arr2[]={0,2,3,3,4,4,6,30},len2=sizeof(arr2)/sizeof(arr2[0]);
+    MergeSortedArray(arr1,len1,arr2,len2);
+    return 0;
+}
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+--------------------------------------------------------------
+
+
+
 
 
 
