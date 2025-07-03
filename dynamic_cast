@@ -1,0 +1,66 @@
+// 1. Dynamic_cast is a special type of casting in which safely converts pointer or reference from base class to derived class at runtime.
+// 2. There should be always one virtual function in base class.
+// 3. classes should be polymorphic.
+// 4. Example : Suppose you are security guard in a zoo. then some big boxes of animal comes to zoo, you only know that these are animals, you dont know it is dog or it is cat. To Identiy that it is dog or other animal we use dynamic cast. if wrong animal is present in box then it returns null pointer.
+
+
+
+#include <iostream>
+
+class Animal
+{
+    // Base class must be polymorphic for dynamic_cast to work
+    virtual void sound() {}
+};
+
+class Dog : public Animal
+{
+public:
+    void Bark()
+    {
+        std::cout << "It is barking.\n";
+    }
+};
+
+class Cat : public Animal
+{
+public:
+    void Meow()
+    {
+        std::cout << "It is meowing.\n";
+    }
+};
+
+int main() {
+    // Base class pointer pointing to a Dog object
+    Animal *ptr = new Dog();
+
+    // Try casting to Dog*
+    Dog *d1 = dynamic_cast<Dog*>(ptr);
+    if (d1 == nullptr)
+    {
+        std::cout << "It is not a Dog.\n";
+    }
+    else
+    {
+        std::cout << "It is a Dog.\n";
+        d1->Bark();
+    }
+
+    // Try casting to Cat*
+    Cat *c1 = dynamic_cast<Cat*>(ptr);
+    if (c1 == nullptr)
+    {
+        std::cout << "It is not a Cat.\n";
+    }
+    else
+    {
+        std::cout << "It is a Cat.\n";
+        c1->Meow();
+    }
+
+    // Clean up
+    delete ptr;
+
+    return 0;
+}
