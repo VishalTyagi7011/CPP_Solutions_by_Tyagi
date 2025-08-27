@@ -1,0 +1,240 @@
+#include <iostream>
+#include<cstring>
+using namespace std;
+
+class TicTacToe
+{
+	string player1;
+	string player2;
+	int count=1;
+	char arr[3][3]= {{'1','2','3'}
+		,{'4','5','6'}
+		,{'7','8','9'}
+	};
+public:
+	TicTacToe() {}
+	void play()
+	{
+		char wantContinue;
+		while(true) {
+			getPlayerName();
+			printArray(arr,3);
+			subPlay();
+
+			cout<<"\nDo you want to play ,Again ? Y/N";
+			cin>>wantContinue;
+			while(wantContinue!='n' && wantContinue!='N' && wantContinue!='y' && wantContinue!='Y')
+			{
+				cout<<"Invalid!, answer\n";
+				cin>>wantContinue;
+			}
+			if(wantContinue=='n' || wantContinue=='N') {
+				cout<<"    -------------------------------\n";
+				cout<<"    ----  Thanks for playing  -----\n";
+				cout<<"    -------------------------------\n";
+				break;
+			}
+			else
+				reset();
+
+		}
+	}
+
+
+
+
+private:
+
+	void reset()
+	{
+		count=1;
+		char newarr[3][3]= {{'1','2','3'}
+			,{'4','5','6'}
+			,{'7','8','9'}
+		};
+		memcpy(arr,newarr,sizeof(arr));
+	}
+	void getPlayerName()
+	{
+	    
+		cout<<"Enter the 1st player name : ";
+		getline(cin,player1);
+		cout<<"Enter the 2nd player name : ";
+		getline(cin,player2);
+	}
+
+	void printArray(char arr[][3],int rows)
+	{
+		for(int i=0; i<3; i++)
+		{
+			cout<<"           ";
+			cout<<"-------------\n";
+			cout<<"           | ";
+			for(int j=0; j<rows; j++)
+			{
+				cout<<arr[i][j]<<" | ";
+			}
+			std::cout<<std::endl;
+		}
+		cout<<"           ";
+		cout<<"-------------\n\n";
+
+	}
+
+	void subPlay()
+	{
+		do {
+
+			string user;
+			int position;
+			if(count%2!=0)
+			{
+				user=player1;
+			}
+			else
+				user=player2;
+
+			cout<<user<<" , your target position is : ";
+			cin>>position;
+			changeBoxElement(position,count);
+			if(count>4)
+			{
+				if(checkUserWinOrNot()) {
+					printArray(arr,3);
+					break;
+				}
+
+			}
+			count++;
+			printArray(arr,3);
+
+		} while(count<=9);
+		if(count>9)
+		{
+			cout<<"    -------------------------------\n";
+			cout<<"    ------   Match draw    --------\n";
+			cout<<"    -------------------------------\n";
+		}
+	}
+
+	void changeBoxElement(int index,const int whichPlayer)
+	{
+		switch(index)
+		{
+		case 1:
+			if(whichPlayer%2!=0)
+				arr[0][0]='#';
+			else
+				arr[0][0]= '*';
+			break;
+
+		case 2:
+			if(whichPlayer%2!=0)
+				arr[0][1]='#';
+			else
+				arr[0][1]= '*';
+			break;
+
+		case 3:
+			if(whichPlayer%2!=0)
+				arr[0][2]='#';
+			else
+				arr[0][2]= '*';
+			break;
+
+		case 4:
+			if(whichPlayer%2!=0)
+				arr[1][0]='#';
+			else
+				arr[1][0]= '*';
+			break;
+
+		case 5:
+			if(whichPlayer%2!=0)
+				arr[1][1]='#';
+			else
+				arr[1][1]= '*';
+			break;
+
+		case 6:
+			if(whichPlayer%2!=0)
+				arr[1][2]='#';
+			else
+				arr[1][2]= '*';
+			break;
+
+		case 7:
+			if(whichPlayer%2!=0)
+				arr[2][0]='#';
+			else
+				arr[2][0]= '*';
+			break;
+
+		case 8:
+			if(whichPlayer%2!=0)
+				arr[2][1]='#';
+			else
+				arr[2][1]= '*';
+			break;
+
+		case 9:
+			if(whichPlayer%2!=0)
+				arr[2][2]='#';
+			else
+				arr[2][2]= '*';
+			break;
+		}
+
+	}
+
+	bool checkUserWinOrNot()
+	{
+		if(arr[0][0]==arr[1][1] && arr[1][1]==arr[2][2]) {
+			printCongrats();
+			return true;
+		}
+		if(arr[0][2]==arr[1][1] && arr[1][1]==arr[2][0]) {
+			printCongrats();
+			return true;
+		}
+		for(int i=0; i<3; i++)
+		{
+			if(arr[i][0]==arr[i][1] && arr[i][1]==arr[i][2])
+			{
+				printCongrats();
+				return true;
+			}
+
+			if(arr[0][i]==arr[1][i] && arr[1][i]==arr[2][i])
+			{
+				printCongrats();
+				return true;
+			}
+
+		}
+		return false;
+	}
+
+	void printCongrats()
+	{
+		if(count%2!=0)
+		{
+			cout<<"congratulations, "<<player1<<" win\n";
+		}
+		else
+		{
+			cout<<"congratulations, "<<player2<<" win\n";
+		}
+	}
+
+};
+
+
+
+int main()
+{
+	TicTacToe obj;
+	obj.play();
+
+	return 0;
+}
